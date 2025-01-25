@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block contents %}
+<h2 align="center">{{page_name}}</h2> 
+<form action="{% url 'loginify_app:login' %}" method="POST"> 
+    {% csrf_token %}
+    <table>
+        <tbody>
+        <tr>
+            <th><label for="id_email">Email:</label></th>
+            <td><input type="email" name="email" maxlength="254" required="" id="id_email"></td>
+        </tr>
+    
+        <tr>
+            <th><label for="id_password">Password:</label></th>
+            <td><input type="password" name="password" maxlength="12" id="id_password"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit"></td>
+        </tr>
+        </tbody>
+    </table>
+</form>
+
+{% if error == True %}
+<h4>{{message}}</h4>
+{% endif %}
+
+{% endblock %}
