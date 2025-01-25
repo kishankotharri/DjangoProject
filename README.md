@@ -31,7 +31,7 @@ This Django project provides a robust system for user signup, login, and profile
 		- Retrieved records for validation.
 		- Deleted unnecessary records.
    
-5. **5. CRUD Operations via API**: 
+5. **CRUD Operations via API**: 
    - Installed required dependencies:
 		- django-rest-framework for creating REST APIs.
 		- django-rest-framework-simplejwt for JWT authentication.
